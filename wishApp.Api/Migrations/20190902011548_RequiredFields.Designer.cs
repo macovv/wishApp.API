@@ -9,8 +9,8 @@ using wishApp.Api.Data;
 namespace wishApp.Api.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20190902002545_wishes")]
-    partial class wishes
+    [Migration("20190902011548_RequiredFields")]
+    partial class RequiredFields
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -203,13 +203,15 @@ namespace wishApp.Api.Migrations
 
                     b.Property<bool>("IsFinished");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<string>("UrlToShop");
 
                     b.Property<int?>("UserId");
 
-                    b.Property<string>("WishDescription");
+                    b.Property<string>("WishDescription")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

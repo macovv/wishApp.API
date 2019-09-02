@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace wishApp.Api.Migrations
 {
-    public partial class init : Migration
+    public partial class RequiredFields : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -181,11 +181,11 @@ namespace wishApp.Api.Migrations
                     Cost = table.Column<int>(nullable: false),
                     CollectedMoney = table.Column<int>(nullable: false),
                     UrlToShop = table.Column<string>(nullable: true),
-                    Name = table.Column<string>(nullable: true),
+                    Name = table.Column<string>(nullable: false),
                     Created = table.Column<DateTime>(nullable: false),
                     Finished = table.Column<DateTime>(nullable: false),
                     IsFinished = table.Column<bool>(nullable: false),
-                    WishDescription = table.Column<string>(nullable: true),
+                    WishDescription = table.Column<string>(nullable: false),
                     UserId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

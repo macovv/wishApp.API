@@ -201,13 +201,15 @@ namespace wishApp.Api.Migrations
 
                     b.Property<bool>("IsFinished");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .IsRequired();
 
                     b.Property<string>("UrlToShop");
 
                     b.Property<int?>("UserId");
 
-                    b.Property<string>("WishDescription");
+                    b.Property<string>("WishDescription")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

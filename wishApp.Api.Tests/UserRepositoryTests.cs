@@ -13,6 +13,7 @@ namespace wishApp.Api.Tests
         {
             var user = new User();
             var repo = new Mock<IUserRepository>();
+            
             Console.WriteLine("chuj");
         }
     }
